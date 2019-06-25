@@ -10,17 +10,13 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Barkeeper2.Repositories
 {
-    public class IngredientsRepository
+    public class IngredientsRepository : BaseRepository<Ingredient>
     {
         private readonly ApplicationDbContext _context;
 
-        public IngredientsRepository(ApplicationDbContext context)
-        {
+        public IngredientsRepository(ApplicationDbContext context) : base(context) {
             _context = context;
         }
 
-        public async Task<IEnumerable<Ingredient>> GetAllAsync() {
-            return await _context.Ingredients.ToListAsync();
-        }
     }
 }
