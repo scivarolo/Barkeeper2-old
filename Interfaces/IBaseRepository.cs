@@ -8,7 +8,6 @@ namespace Barkeeper2.Interfaces
 {
     public interface IBaseRepository<T> where T : class
     {
-
         ICollection<T> GetAll();
 
         Task<ICollection<T>> GetAllAsync();
@@ -29,9 +28,9 @@ namespace Barkeeper2.Interfaces
 
         Task<T> AddAsync(T t);
 
-        T Update(T Item, int Id);
+        T Update(T UpdatedItem, int Id);
 
-        Task<T> UpdateAsync(T item, int Id);
+        Task<T> UpdateAsync(T UpdatedItem, int Id);
 
         void Delete(T t);
 
