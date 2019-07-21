@@ -13,7 +13,25 @@ namespace Barkeeper2.Data
             IOptions<OperationalStoreOptions> operationalStoreOptions) : base(options, operationalStoreOptions)
         {
         }
+        public DbSet<ApplicationUser> ApplicationUsers { get; set; }
 
         public DbSet<Ingredient> Ingredients { get; set; }
+
+        public DbSet<Cocktail> Cocktails { get; set; }
+
+        public DbSet<Product> Products { get; set; }
+
+        public DbSet<CocktailIngredient> CocktailIngredients { get; set; }
+
+        public DbSet<UserCocktail> UserCocktails { get; set; }
+
+        public DbSet<UserHistory> UserHistories { get; set; }
+
+        public DbSet<UserProduct> UserProducts { get; set; }
+
+        public DbSet<UserShopping> UserShopping { get; set; }
+
+        public DbSet<UserTabCocktail> UserTabCocktails { get; set; }
+
     }
 }
