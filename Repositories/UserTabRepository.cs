@@ -4,10 +4,10 @@ using Barkeeper2.Interfaces;
 
 namespace Barkeeper2.Repositories
 {
-    public class CocktailsRepository : BaseRepository<Cocktail>, ICocktailsRepository {
+    public class UserTabsRepository : BaseRepository<UserTabCocktail>, IUserTabsRepository {
         private readonly ApplicationDbContext _context;
 
-        public CocktailsRepository(ApplicationDbContext context) : base(context) {
+        public UserTabsRepository(ApplicationDbContext context) : base(context) {
             _context = context;
         }
     }
