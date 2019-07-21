@@ -15,7 +15,7 @@ namespace Barkeeper2.Services
             _ingredientsRepository = repository;
         }
 
-        public async Task<IEnumerable<Ingredient>> GetAllIngredients()
+        public async Task<IEnumerable<Ingredient>> GetAll()
         {
             return await _ingredientsRepository.GetAllAsync();
         }
