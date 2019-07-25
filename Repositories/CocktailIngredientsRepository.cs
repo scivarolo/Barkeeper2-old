@@ -4,7 +4,7 @@ using Barkeeper2.Interfaces;
 
 namespace Barkeeper2.Repositories
 {
-    public class CocktailIngredientsRepository : BaseRepository<CocktailIngredient>, ICocktailIngredientsRepository {
+    public class CocktailIngredientsRepository : BaseRepository<CocktailIngredient> {
         private readonly ApplicationDbContext _context;
 
         public CocktailIngredientsRepository(ApplicationDbContext context) : base(context) {

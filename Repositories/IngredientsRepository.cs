@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Barkeeper2.Repositories
 {
-    public class IngredientsRepository : BaseRepository<Ingredient>, IIngredientsRepository
+    public class IngredientsRepository : BaseRepository<Ingredient>
     {
         private readonly ApplicationDbContext _context;
 

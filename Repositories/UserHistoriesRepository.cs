@@ -4,7 +4,7 @@ using Barkeeper2.Interfaces;
 
 namespace Barkeeper2.Repositories
 {
-    public class UserHistoriesRepository : BaseRepository<UserHistory>, IUserHistoriesRepository {
+    public class UserHistoriesRepository : BaseRepository<UserHistory> {
         private readonly ApplicationDbContext _context;
 
         public UserHistoriesRepository(ApplicationDbContext context) : base(context) {
