@@ -72,7 +72,7 @@ export class FetchData extends Component {
 
     async getIngredients() {
         const token = await authService.getAccessToken();
-        const response = await fetch('api/Ingredients/Ingredients', {
+        const response = await fetch('api/v2/ingredients', {
             headers: !token ? {} : { 'Authorization': `Bearer ${token}` }
         });
         const data = await response.json();
