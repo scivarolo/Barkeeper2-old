@@ -6,9 +6,9 @@ using Barkeeper2.Repositories;
 
 namespace Barkeeper2.Services {
 	public class CocktailIngredientsService : BaseService<CocktailIngredient>, ICocktailIngredientsService {
-		private readonly CocktailIngredientsRepository _cocktailIngredientsRepository;
+		private readonly ICocktailIngredientsRepository _cocktailIngredientsRepository;
 
-		public CocktailIngredientsService (CocktailIngredientsRepository cocktailIngredientsRepository) : base (cocktailIngredientsRepository) {
+		public CocktailIngredientsService (ICocktailIngredientsRepository cocktailIngredientsRepository) : base (cocktailIngredientsRepository) {
 			_cocktailIngredientsRepository = cocktailIngredientsRepository;
 		}
 	}

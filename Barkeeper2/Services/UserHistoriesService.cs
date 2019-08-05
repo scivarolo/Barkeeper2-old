@@ -4,9 +4,9 @@ using Barkeeper2.Repositories;
 
 namespace Barkeeper2.Services {
 	public class UserHistoriesService : BaseService<UserHistory>, IUserHistoriesService {
-		private readonly UserHistoriesRepository _userHistoriesRepository;
+		private readonly IUserHistoriesRepository _userHistoriesRepository;
 
-		public UserHistoriesService (UserHistoriesRepository userHistoriesRepository) : base (userHistoriesRepository) {
+		public UserHistoriesService (IUserHistoriesRepository userHistoriesRepository) : base (userHistoriesRepository) {
 			_userHistoriesRepository = userHistoriesRepository;
 		}
 	}

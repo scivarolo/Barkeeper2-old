@@ -4,9 +4,9 @@ using Barkeeper2.Repositories;
 
 namespace Barkeeper2.Services {
 	public class UserShoppingService : BaseService<UserShopping>, IUserShoppingService {
-		private readonly UserShoppingRepository _userShoppingRepository;
+		private readonly IUserShoppingRepository _userShoppingRepository;
 
-		public UserShoppingService (UserShoppingRepository userShoppingRepository) : base (userShoppingRepository) {
+		public UserShoppingService (IUserShoppingRepository userShoppingRepository) : base (userShoppingRepository) {
 			_userShoppingRepository = userShoppingRepository;
 		}
 	}
