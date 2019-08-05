@@ -1,7 +1,9 @@
-
+﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Barkeeper2", "Barkeeper2.csproj", "{0E6AB913-6331-4C40-A0F2-EC0723D95BC3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Barkeeper2.Tests", "Barkeeper2.Tests\Barkeeper2.Tests.csproj", "{B8870D7A-1206-4750-819E-827AF6D14000}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Barkeeper2", "Barkeeper2\Barkeeper2.csproj", "{B4D48F2D-3BE5-40C8-9373-6CBEAF51FA73}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -9,9 +11,13 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{0E6AB913-6331-4C40-A0F2-EC0723D95BC3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0E6AB913-6331-4C40-A0F2-EC0723D95BC3}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0E6AB913-6331-4C40-A0F2-EC0723D95BC3}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0E6AB913-6331-4C40-A0F2-EC0723D95BC3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B8870D7A-1206-4750-819E-827AF6D14000}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B8870D7A-1206-4750-819E-827AF6D14000}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B8870D7A-1206-4750-819E-827AF6D14000}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B8870D7A-1206-4750-819E-827AF6D14000}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B4D48F2D-3BE5-40C8-9373-6CBEAF51FA73}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B4D48F2D-3BE5-40C8-9373-6CBEAF51FA73}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B4D48F2D-3BE5-40C8-9373-6CBEAF51FA73}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B4D48F2D-3BE5-40C8-9373-6CBEAF51FA73}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
