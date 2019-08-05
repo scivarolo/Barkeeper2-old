@@ -1,7 +1,9 @@
 using Barkeeper2.Models;
 
-namespace Barkeeper2.Interfaces {
-	public interface IIngredientsRepository : IBaseRepository<Ingredient> {
+namespace Barkeeper2.Interfaces
+{
+    public interface IIngredientsRepository : IBaseRepository<Ingredient>
+    {
 
-	}
+    }
 }
