@@ -31,14 +31,14 @@ namespace Barkeeper2.Interfaces {
 		/// <param name="UpdatedItem">Entity to update</param>
 		/// <param name="Id">Id of entity to update</param>
 		/// <returns>Updated entity</returns>
-		Task<T> Update (T UpdatedItem, int Id);
+		Task<T> Update (T UpdatedItem, int Id, string UserId);
 
 		/// <summary>
 		/// Delete an existing entity from the database
 		/// </summary>
 		/// <param name="t">Entity to delete</param>
 		/// <returns>Id of deleted entity</returns>
-		Task<int> Delete (T t);
+		Task<int> Delete (T t, string UserId);
 
 		/// <summary>
 		/// Count number of entities of type

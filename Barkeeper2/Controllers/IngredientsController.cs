@@ -1,61 +1,70 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Claims;
 using System.Threading.Tasks;
-using Barkeeper2.Data;
 using Barkeeper2.Interfaces;
 using Barkeeper2.Models;
-using Barkeeper2.Services;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 
 namespace Barkeeper2.Controllers {
 
-	[Authorize]
-	[Route("api/v2/ingredients")]
-	public class IngredientsController {
+    [Authorize]
+    [Route("api/v2/ingredients")]
+    public class IngredientsController : ControllerBase
+    {
 
-		private readonly IIngredientsService _ingredientsService;
-		public IngredientsController(IIngredientsService ingredientsService) {
-			_ingredientsService = ingredientsService;
-		}
+        private readonly IIngredientsService _ingredientsService;
 
-#region Get Ingredients
 
-		[HttpGet]
-		public async Task<ICollection<Ingredient>> GetIngredients() {
-			var model = await _ingredientsService.GetAll();
-			return model;
-		}
+        public IngredientsController(IIngredientsService ingredientsService)
+        {
+            _ingredientsService = ingredientsService;
+        }
 
-		[HttpGet("{id}")]
-		public async Task<Ingredient> GetIngredient(int id) {
-			var model = await _ingredientsService.GetById(id);
-			return model;
-		}
+        #region Get Ingredients
+        [HttpGet]
+        public async Task<ICollection<Ingredient>> GetIngredients()
+        {
+            var model = await _ingredientsService.GetAll();
+            return model;
+        }
 
-#endregion
+        [HttpGet("{id}")]
+        public async Task<Ingredient> GetIngredient(int id)
+        {
+            var model = await _ingredientsService.GetById(id);
+            return model;
+        }
 
-#region Save Ingredients
+        #endregion
 
-		[HttpPost]
-		public async Task<Ingredient> AddNewIngredient(Ingredient newIngredient) {
-			var model = await _ingredientsService.AddNew(newIngredient);
-			return model;
-		}
+        #region Save Ingredients
 
-		[HttpPut]
+        [HttpPost]
+        public async Task<Ingredient> AddNewIngredient(Ingredient newIngredient)
+        {
+            string userId = User.FindFirst(ClaimTypes.NameIdentifier).Value;
+            newIngredient.CreatedById = userId;
+            var model = await _ingredientsService.AddNew(newIngredient);
+            return model;
+        }
+
+        [HttpPut("{id}")]
 		public async Task<Ingredient> UpdateIngredient(Ingredient updatedIngredient, int id) {
-            var model = await _ingredientsService.Update(updatedIngredient, id);
+            string userId = User.FindFirst(ClaimTypes.NameIdentifier).Value;
+            var model = await _ingredientsService.Update(updatedIngredient, id, userId);
             return model;
         }
 
 #endregion
 
-		[HttpDelete]
+		[HttpDelete("{id}")]
 		public async Task<int> DeleteIngredient(Ingredient ingredient) {
-            return await _ingredientsService.Delete(ingredient);
+            string userId = User.FindFirst(ClaimTypes.NameIdentifier).Value;
+            return await _ingredientsService.Delete(ingredient, userId);
         }
 
 	}
