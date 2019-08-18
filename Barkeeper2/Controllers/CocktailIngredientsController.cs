@@ -42,10 +42,10 @@ namespace Barkeeper2.Controllers {
             return model;
         }
 
-        [HttpPut("{id}")]
-        public async Task<CocktailIngredient> UpdateCocktailIngredient(CocktailIngredient updatedCocktailIngredient, int id) {
-            var model = await _cocktailIngredientsService.Update(updatedCocktailIngredient, id);
-            return model;
-        }
+        // [HttpPut("{id}")]
+        // public async Task<CocktailIngredient> UpdateCocktailIngredient(CocktailIngredient updatedCocktailIngredient, int id) {
+        //     var model = await _cocktailIngredientsService.Update(updatedCocktailIngredient, id);
+        //     return model;
+        // }
 	}
 }

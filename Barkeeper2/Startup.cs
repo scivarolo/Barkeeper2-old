@@ -98,7 +98,8 @@ namespace Barkeeper2 {
 				spa.Options.SourcePath = "ClientApp";
 
 				if (env.IsDevelopment()) {
-					spa.UseReactDevelopmentServer(npmScript: "start");
+					//spa.UseReactDevelopmentServer(npmScript: "start");
+					spa.UseProxyToSpaDevelopmentServer("http://localhost:3000");
 				}
 			});
 		}

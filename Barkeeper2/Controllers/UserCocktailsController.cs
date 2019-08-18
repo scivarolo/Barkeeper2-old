@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 using Barkeeper2.Interfaces;
 using Barkeeper2.Models;
 using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspnetCore.Http;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Barkeeper2.Controllers {
     [Authorize]
-    [Route["api/v2/usercocktails"]]
+    [Route("api/v2/usercocktails")]
     public class UserCocktailsController : ControllerBase
     {
 
