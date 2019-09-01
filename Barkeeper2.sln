@@ -5,6 +5,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Barkeeper2.Tests", "Barkeep
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Barkeeper2", "Barkeeper2\Barkeeper2.csproj", "{B4D48F2D-3BE5-40C8-9373-6CBEAF51FA73}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Barkeeper2.UI", "Barkeeper2.UI", "{56F1F8EB-9048-420B-9FE4-7E8A6CF226FE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
