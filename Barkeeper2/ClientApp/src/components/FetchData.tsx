@@ -19,7 +19,7 @@ export class FetchData extends Component<{}, FetchDataState> {
 
   constructor(props: any) {
     super(props);
-    this.state = { forecasts: [], loading: true };
+    this.state = { forecasts: [], loading: true }
   }
 
   componentDidMount() {

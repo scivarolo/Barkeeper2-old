@@ -99,7 +99,7 @@ namespace Barkeeper2 {
 
 				if (env.IsDevelopment()) {
 					// spa.UseReactDevelopmentServer(npmScript: "start");
-					spa.UseProxyToSpaDevelopmentServer("http://localhost:8081");
+					spa.UseProxyToSpaDevelopmentServer("http://localhost:8080");
 				}
 			});
 		}
